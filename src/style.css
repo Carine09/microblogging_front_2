@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+/* Import Font Family */
+@font-face {
+    font-family: "More Sugar";
+    src: url(./assets/fonts/MoreSugar-Regular.ttf);
+}
+
+/* Design Tokens */
+@theme {
+    /* Colors */
+    --color-dark-green: #355940;
+    --color-light-orange: #f9f1e9;
+    --color-light-pink: #e3ccd5;
+
+    /* Font Families */
+    --font-heading: "More Sugar", sans-serif;
+    --font-body: "Helvetica", sans-serif;
+}
