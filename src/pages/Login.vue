@@ -1,3 +1,4 @@
+
 <template>
 <div class="h-screen flex flex-col lg:flex-row overflow-hidden">    
 
@@ -26,6 +27,7 @@
 
 
 <script setup>      
+
 
 
 </script>
