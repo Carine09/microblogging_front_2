@@ -5,6 +5,7 @@ import Profile from '../pages/Profile.vue';
 import Home from "../pages/Home.vue";
 import Login from "../pages/Login.vue";
 import NewPost from "../pages/NewPost.vue";
+import PostForm from "../pages/PostForm.vue";
 
 const routes = [
   { path: "/", redirect: "/login" },
@@ -12,6 +13,7 @@ const routes = [
   { path: "/home", component: Home },
   { path: "/newPost", component: NewPost },
   { path: "/profile", component: Profile },
+  { path: "/postForm", component: PostForm },
 ];
 
 const router = createRouter({
