@@ -1,5 +1,6 @@
 <template>
 
+
  <div
     class="h-screen flex flex-col lg:flex-row overflow-hidden"
     style="background-image: url('/images/slightly-textured-wallpaper-pattern.jpg'); background-size: cover; background-position: center;"
@@ -27,11 +28,14 @@
             <!-- Email label: Responsive typography (16px-32px) with body font -->
             <label for="email"
               class="block text-base sm:text-lg md:text-xl lg:text-lg xl:text-xl 2xl:text-2xl font-body text-dark-aubergine-800">
+
               Email
+              
             </label>
 
             <!-- Email input field: Full width with responsive padding, focus ring on interaction -->
             <input id="email" type="email" required
+
               class=" border-1 border-dark-green rounded-md bg-light-orange w-full px-3 py-2 sm:px-4 sm:py-3 lg:px-3 lg:py-2 xl:px-4 xl:py-3 2xl:px-5 2xl:py-4 bg-light-beige-100 text-sm sm:text-base lg:text-base xl:text-lg 2xl:text-xl focus:outline-none" />
           </div>
 
@@ -46,6 +50,7 @@
 
             <!-- Password input field: Full width with responsive padding, focus ring on interaction -->
             <input id="password" type="password" required
+
               class="border-solid rounded-md bg-light-orange w-full px-3 py-2 sm:px-4 sm:py-3 lg:px-3 lg:py-2 xl:px-4 xl:py-3 2xl:px-5 2xl:py-4 bg-light-beige-100 text-dark-aubergine-800 text-sm sm:text-base lg:text-base xl:text-lg 2xl:text-xl focus:outline-none" />
           </div>
 
@@ -57,23 +62,23 @@
 
           <!-- Submit button: Full width with responsive padding, hover and active states -->
           <button id="login-button" type="submit"
+
             class="border-solid rounded-md bg-dark-green text-light-orange w-full hover:bg-light-orange hover:text-dark-green active:scale-95 px-4 py-3 sm:px-6 sm:py-4 lg:px-4 lg:py-3 xl:px-6 xl:py-4 2xl:px-8 2xl:py-5 text-sm sm:text-base lg:text-base xl:text-lg 2xl:text-xl font-body text-light-beige-100 transition-all duration-200 mt-4 sm:mt-6 lg:mt-3 xl:mt-4 2xl:mt-6 cursor-pointer shadow-lg hover:shadow-xl">
             Connecte-toi
+
           </button>
         </form>
       </div>
     </div>
- </div>
-  
 
+ </div>
 
 
 </template>
 
 <script setup>      
-import router from '../router/index';
+import router from '../router/index.js';
 import { onMounted } from 'vue';
-
 
 
 </script>
