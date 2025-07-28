@@ -9,8 +9,12 @@ export default defineConfig({
     vue(),
     tailwindcss(),
   ],
-  server: {
+
+ server: {
+  watch: {
+    usePolling: true  
+  },
     port: 5173
-  }
+ }
 })
 
