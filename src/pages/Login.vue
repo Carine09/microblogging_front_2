@@ -59,14 +59,12 @@
           </p>
 
           <!-- Submit button: Full width with responsive padding, hover and active states -->
-         <RouterLink to="/home">
           <button id="login-button" type="submit"
 
             class="border-1 border-dark-green rounded-md bg-dark-green text-light-orange w-full hover:bg-light-orange hover:text-dark-green active:scale-95 px-4 py-3 sm:px-6 sm:py-4 lg:px-4 lg:py-3 xl:px-6 xl:py-4 2xl:px-8 2xl:py-5 text-sm sm:text-base lg:text-base xl:text-lg 2xl:text-xl font-body transition-all duration-200 mt-4 sm:mt-6 lg:mt-3 xl:mt-4 2xl:mt-6 cursor-pointer shadow-lg hover:shadow-xl">
             Connecte-toi
 
           </button>
-        </RouterLink>
         </form>
       </div>
     </div>
