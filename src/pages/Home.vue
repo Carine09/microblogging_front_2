@@ -1,6 +1,6 @@
 <template>
   <div
-    class="h-screen flex flex-col"
+    class="min-h-100 flex flex-col"
     style="
       background-image: url('/images/canvaPaper.png');
       background-size: cover;
@@ -8,11 +8,11 @@
     "
   >
     <header>  <!-- Logo and account  -->
-      <div class="flex items-center justify-between space-x-2 sm:space-x-4">
+      <div class="flex items-center justify-between space-x-2 ml-4 mr-4 sm:space-x-4">
         <img
           src="/public/DrawSphere.png"
           alt="Brand logo"
-          class="h-16 sm:h-16 lg:h-20 my-4"
+          class="h-24 sm:h-24 lg:h-32 "
         />
         <RouterLink to ="/newPost">
         <input 
@@ -36,21 +36,21 @@
           :technic="post.technic_id"
           :date="post.created_at"
            /> -->
-        <div class="outline-solid m-8">
-           <div class="flex item-center item-baseline"> 
+        <div class="h-screen overflow-hidden outline-solid outline-dark-green rounded-md bg-light-orange mx-8 md:mx-32">
+           <div class="flex  item-baseline"> 
                 <img
                 src="/public/DrawSphere.png"
                 alt="Brand logo"
                 class="h-12 sm:h-12 lg:h-16 my-2"
                 />
-                <h2 class="font-heading text-xl">Flaya</h2>
+                <h2 class="font-heading text-dark-green text-xl my-2">Flaya</h2>
             </div>
-            <div>
+            <div class="h-screen">
             <p>Modèles Vivantes arc-en-ciel</p>
             <img
               src="/src/assets/images/flaya_art/Flaya_1.jpg"
               alt="Modèles vivantes réalisées en aquarelle, aux couleurs de l'arc en ciel"
-              class="object-contain flex justify-center w-full h-full"
+              class="object-scale-down max-h-full drop-shadow-md rounded-md m-auto flex item-center justify-center"
             />
           </div>
         </div>
@@ -62,14 +62,14 @@
         <'img_url' => '/public/assets/images/moose_art/moose_1.jpg', >
         <'technic_id' => 10, //ballpoint pen>
         <'created_at' => now(),> -->
-        <div class="outline-solid m-8">
+        <div class="h-150 overflow-hidden outline-solid outline-dark-green rounded-md bg-light-orange mx-8 md:mx-32 my-4">
            <div class="flex flex-row item-center item-baseline"> 
                 <img
                 src="/public/DrawSphere.png"
                 alt="Brand logo"
                 class="h-12 sm:h-12 lg:h-14 my-2"
                 />
-                <h2 class="font-heading text-xl">Moose</h2>
+                <h2 class="font-heading text-dark-green text-xl my-2">Moose</h2>
             </div>
             <div>
             <p>Bro's Portrait</p>
