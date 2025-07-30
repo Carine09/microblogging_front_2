@@ -73,10 +73,28 @@ const selectedTechnic = ref('');
 // }
 
 async function sendData() {
+
+    const technics = {
+    "oil painting": 1,
+    "watercolor": 2,
+    "acrylic painting": 3,
+    "gouache": 4,
+    "digital art": 5,
+    "calligraphy": 6,
+    "sketching": 7,
+    "charcoal drawing": 8,
+    "pastel art": 9,
+    "ballpoint pen": 10,
+    "pencil": 11,
+    "mixed media": 12
+  };
+
     const dataForm = {
-        text: text.value,
-        imageUrl: imageUrl.value,
-        selectedTechnic: selectedTechnic.value
+        user_id: authStore.userId, // ou authStore.userId selon ta structure
+    text: text.value,
+    img_url: imageUrl.value,
+    technic_id: technics[selectedTechnic.value] || null,
+
     }
     try {
         const response = await fetch(`http://localhost:8000/api/post`, {
