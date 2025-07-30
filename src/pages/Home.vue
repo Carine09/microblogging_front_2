@@ -28,17 +28,6 @@
     </header>
 
     <div>
-     <!-- affichage dynamique
-     <post
-     v-for="post in PostList" 
-     :id="user_id" 
-     :title="post.text"
-     :img_url="post.img_url"
-     :alt="furniture.alt"
-     :technic="post.technic_id"
-     :date="post.created_at"
-     /> -->
-     
       <div
         class="h-screen overflow-hidden outline-solid outline-dark-green rounded-md bg-light-orange mx-8 md:mx-32"
       >
@@ -55,38 +44,21 @@
           <img
             src="/src/assets/images/flaya_art/Flaya_1.jpg"
             alt="Modèles vivantes réalisées en aquarelle, aux couleurs de l'arc en ciel"
-            class="object-scale-down max-h-full drop-shadow-md rounded-md m-auto flex item-center justify-center"
+            class="object-scale-down max-h-full max-w-full drop-shadow-md rounded-md m-auto flex item-center justify-center"
           />
         </div>
       </div>
     </div>
     <div>
-      <!-- CORRESPONDANCE AVEC LE POST SEEDER -->
-      <!-- <'user_id' => $moose->id,>
-        <'text' => 'Bro portrait',>
-        <'img_url' => '/public/assets/images/moose_art/moose_1.jpg', >
-        <'technic_id' => 10, //ballpoint pen>
-        <'created_at' => now(),> -->
-      <div
-        class="h-screen overflow-hidden outline-solid outline-dark-green rounded-md bg-light-orange mx-8 md:mx-32 my-4"
-      >
-        <div class="flex item-baseline">
-          <img
-            src="/public/DrawSphere.png"
-            alt="Brand logo"
-            class="h-12 sm:h-12 lg:h-16 my-2"
-          />
-          <h2 class="font-heading text-dark-green text-xl my-2">Moose</h2>
-        </div>
-        <div class="h-screen">
-          <p class="text-body">Portraits du Bro</p>
-          <img
-            src="/src/assets/images/moose_art/moose_1.jpg"
-            alt="Portraits de mon petit frères, réalisés avec un stylo bille"
-            class="object-scale-down max-h-full drop-shadow-md rounded-md m-auto flex item-center justify-center"
-          />
-        </div>
-      </div>
+      <postItem
+        v-for="post in postList"
+        :id="post.id"
+        :user_id="post.user_id"
+        :text="post.text"
+        :img_url="post.img_url"
+        :technic_id="post.technic_id"
+      />
+
       <div
         class="h-screen overflow-hidden outline-solid outline-dark-green rounded-md bg-light-orange mx-8 md:mx-32"
       >
@@ -108,13 +80,32 @@
         </div>
       </div>
     </div>
-
-    <footer>
-      <p>FOOTER</p>
-    </footer>
   </div>
 </template>
 
 <script setup>
 import router from "../router/index.js";
+import { ref } from "vue";
+import postItem from "../assets/components/postItem.vue";
+import { onMounted } from "vue";
+
+const postList = ref([]);
+
+function getAllPosts() {
+  fetch("http://localhost:8000/api/post", {
+    method: "GET",
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      postList.value = data;
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+}
+
+onMounted(() => {
+  getAllPosts();
+});
+
 </script>
