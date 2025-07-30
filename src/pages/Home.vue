@@ -17,7 +17,7 @@
           alt="Brand logo"
           class="h-24 sm:h-24 lg:h-32"
         />
-        <RouterLink to="/newPost">
+        <RouterLink to="/postForm">
           <input
             class="border-1 border-dark-green rounded-md bg-light-orange w-full px-3 py-2 sm:px-4 sm:py-3 lg:px-3 lg:py-2 xl:px-4 xl:py-3 2xl:px-5 2xl:py-4 bg-light-beige-100 text-sm sm:text-base lg:text-base xl:text-lg 2xl:text-xl focus:outline-none"
             placeholder="Que veux-tu partager?"
