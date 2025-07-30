@@ -100,7 +100,8 @@ onMounted(() => {
         if (data.error) {
           throw data.error;
         }
-        auth.setToken(data.access_token);
+        auth.setToken(data.access_token, data.user.id);
+      
         router.push('/home');
       })
       .catch(error => {
