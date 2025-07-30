@@ -1,6 +1,6 @@
 <template>
   <div
-    class="min-h-100 flex flex-col"
+    class="min-h-100 "
     style="
       background-image: url('/images/canvaPaper.png');
       background-size: cover;
@@ -10,24 +10,35 @@
     <header>
       <!-- Logo and account  -->
       <div
-        class="flex items-center justify-between space-x-2 ml-4 mr-4 sm:space-x-4"
+        class="bg-light-orange border-1 border-dark-green flex items-center justify-between"
       >
-        <img
+      <RouterLink to="/home">
+         <img
           src="/public/DrawSphere.png"
           alt="Brand logo"
           class="h-24 sm:h-24 lg:h-32"
         />
-        <RouterLink to="/postForm">
+      </RouterLink>
+       
+      <RouterLink to="/postForm">
           <input
             class="border-1 border-dark-green rounded-md bg-light-orange w-full px-3 py-2 sm:px-4 sm:py-3 lg:px-3 lg:py-2 xl:px-4 xl:py-3 2xl:px-5 2xl:py-4 bg-light-beige-100 text-sm sm:text-base lg:text-base xl:text-lg 2xl:text-xl focus:outline-none"
             placeholder="Que veux-tu partager?"
           />
-        </RouterLink>
-        <RouterLink to="/profile"> Profile </RouterLink>
+      </RouterLink>
+
+      <RouterLink to="/profile">
+          <img
+          src="/src/assets/images/flaya_art/Flaya_5_fresque_acrylique.JPG"
+          alt="Photo de profil allant sur le profil"
+          class="w-24 h-24 rounded-full object-cover m-4"
+        /> 
+      </RouterLink>
+      
       </div>
     </header>
 
-    <div>
+    <div class="m-5">
       <div
         class="h-screen overflow-hidden outline-solid outline-dark-green rounded-md bg-light-orange mx-8 md:mx-32"
       >
