@@ -1,7 +1,7 @@
 <template>
     <div class="h-screen flex flex-col lg:flex-row overflow-hidden"
         style="background-image: url('/images/canvaPaper.png'); background-size: cover; background-position: center;">
-        <form @submit.prevent="createPost"
+        <form @submit.prevent="sendData"
             class="flex flex-col space-y-4 sm:space-y-6 lg:space-y-4 xl:space-y-6 2xl:space-y-8">
 
             <div class="space-y-2 sm:space-y-3 lg:space-y-2 xl:space-y-3">
@@ -60,13 +60,36 @@
 
 <script setup>
 import { ref } from 'vue'
+import { useAuthStore } from '../stores/auth';
 
+const authStore = useAuthStore();
 const text = ref('');
 const imageUrl = ref('');
 const selectedTechnic = ref('');
 
-function createPost() {
-  console.log(`text: ${text.value}, img-url: ${imageUrl.value}, technic used: ${selectedTechnic.value}`)
+
+// function createPost() {
+//     console.log(`text: ${text.value}, img-url: ${imageUrl.value}, technic used: ${selectedTechnic.value}`) // fonction pour tester si les valeurs du formulaires sont récupérées à sa soumission
+// }
+
+async function sendData() {
+    const dataForm = {
+        text: text.value,
+        imageUrl: imageUrl.value,
+        selectedTechnic: selectedTechnic.value
+    }
+    try {
+        const response = await fetch(`http://localhost:8000/api/post`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${authStore.token}`,'Accept' : 'application/json'},
+            body: JSON.stringify(dataForm)
+        });
+
+        const result = await response.json();
+        console.log("Le post à été publié:", result);
+    } catch (erreur) {
+        console.error("Erreur :", erreur);
+    }
 }
 
 </script>
