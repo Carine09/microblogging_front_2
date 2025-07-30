@@ -90,16 +90,17 @@ async function sendData() {
   };
 
     const dataForm = {
-        user_id: authStore.userId, // ou authStore.userId selon ta structure
-    text: text.value,
-    img_url: imageUrl.value,
-    technic_id: technics[selectedTechnic.value] || null,
+        user_id: authStore.userId,
+        text: text.value,
+        img_url: imageUrl.value,
+        technic_id: technics[selectedTechnic.value] || null,
 
     }
     try {
         const response = await fetch(`http://localhost:8000/api/post`, {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${authStore.token}`,'Accept' : 'application/json'},
+            headers: { 'Content-Type': 'application/json', 
+            Authorization: `Bearer ${authStore.token}`,'Accept' : 'application/json'},
             body: JSON.stringify(dataForm)
         });
 
