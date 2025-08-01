@@ -15,6 +15,10 @@
     </div>
     <div class="h-screen">
       <p class="text-body text-dark-green my-1 md:my-2">{{ props.text }}</p>
+
+        <!-- TEMPORAIRE Pour vérifier l'adresse de l'image  -->
+      <!-- <p class="text-red-500 text-sm text-center break-all">{{ props.img_url }}</p> -->
+
       <img
         :src="props.img_url"
         class="object-scale-down max-h-full drop-shadow-md rounded-md m-auto flex item-center justify-center"

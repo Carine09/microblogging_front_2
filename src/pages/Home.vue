@@ -61,6 +61,8 @@
       </div>
     </div>
     <div>
+      <!-- <pre>  est un bloc debug visuel qui ffiche tout ce que chaque post dynamique rempli -->
+      <!-- <pre class="text-white bg-black p-4">{{ postList }}</pre> -->
       <postItem
         v-for="post in postList"
         :id="post.id"
