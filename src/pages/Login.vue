@@ -44,7 +44,7 @@
             <!-- Password label: Responsive typography (16px-32px) with body font -->
             <label for="password"
               class="block text-base sm:text-lg md:text-xl lg:text-lg xl:text-xl 2xl:text-2xl font-body text-dark-green">
-              Password
+              Mot de passe
             </label>
 
             <!-- Password input field: Full width with responsive padding, focus ring on interaction -->
@@ -55,7 +55,7 @@
           <!-- Error message: Hidden by default, shows when login fails, responsive typography -->
           <p id="login-error-message"
             class="text-xs sm:text-sm md:text-base lg:text-sm xl:text-base 2xl:text-lg font-body text-red-alert-600 text-center hidden">
-            Invalid email or password, please try again!
+            Mot de passe ou adresse mail invalide
           </p>
 
           <!-- Submit button: Full width with responsive padding, hover and active states -->
