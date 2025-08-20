@@ -1,29 +1,23 @@
-# microblogging_front
+# Draw Sphere
 
-This template should help get you started developing with Vue 3 in Vite.
+Microblogging app for painters.
 
-## Recommended IDE Setup
+Type : Group — 3 pers
+Durée : 8 days
+Période : 7th month into Ada
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Stack  
 
-## Customize configuration
+- Languages / Frameworks : HTML — CSS (Tailwind) — JS (Vue.js) — PHP (Laravel)   
+- BDD : MySQL  
+- Tools / Services : VSCode — Sanctum — Eloquent — Pinia — Postman  
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## MVP
+Our User can log into their account. When doing so, they can see all the other peole's posts.
+The user can create a new post, add a picture to it.
+They can also check on their profile all their posts and log out.
 
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+### Bonus
+Creating, updating and deleting the account. ATM, there's 3 accounts already created.
+Add the picture directly from the device and not via url
+Edit and delete a post
